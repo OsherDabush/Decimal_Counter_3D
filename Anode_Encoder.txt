@@ -1,0 +1,22 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Anode_Encoder is
+    Port(Anode : in std_logic_vector(2 downto 0);
+         sel : out std_logic_vector(1 downto 0));
+end Anode_Encoder;
+
+architecture Behavioral of Anode_Encoder is
+begin
+
+process(Anode)
+begin
+    case Anode is
+      when "110" => sel <= "00";
+      when "101" => sel <= "01";
+      when "011" => sel <= "10";
+      when others => sel <= "XX";
+    end case;
+end process;
+end Behavioral;

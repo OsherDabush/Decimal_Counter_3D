@@ -1,0 +1,28 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity SEV_SEG_Decoder is
+    Port(Y : in integer range 0 to 9;
+         SEG : out std_logic_vector(6 downto 0));
+end SEV_SEG_Decoder;
+
+architecture Behavioral of SEV_SEG_Decoder is
+begin
+
+process(Y)
+begin
+  case Y is 
+    when 0 => SEG <= "0000001";
+    when 1 => SEG <= "1001111";
+    when 2 => SEG <= "0010010";
+    when 3 => SEG <= "0000110";
+    when 4 => SEG <= "1001100";
+    when 5 => SEG <= "0100100";
+    when 6 => SEG <= "0100000";
+    when 7 => SEG <= "0001111";
+    when 8 => SEG <= "0000000";
+    when 9 => SEG <= "0000100";
+  end case;
+end process;    
+end Behavioral;

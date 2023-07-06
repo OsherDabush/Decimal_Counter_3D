@@ -1,0 +1,41 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity DIVIDER is
+    Port(clk100M, rst : in std_logic;
+         Div : in std_logic_vector(31 downto 0);
+         CLKOUT : out std_logic);
+end DIVIDER;
+
+architecture Behavioral of DIVIDER is
+signal rst_rdy : std_logic := '1';
+signal t : std_logic := '0';
+begin
+
+process(clk100M)
+variable q : unsigned(31 downto 0) := x"00000000";
+begin
+if rising_edge(clk100M) then
+  q := q + 1;
+  if(rst = '1') then
+    if(rst_rdy = '1') then
+      rst_rdy <= '0';
+      q := x"00000000";
+      t <= '0';
+    end if;
+  else
+      rst_rdy <= '1';
+  end if;
+end if;
+  if(std_logic_vector(q) = Div) then
+    t <= NOT t;
+    q := x"00000000";
+  end if;
+end process;
+
+CLKOUT <= t;
+
+end Behavioral;
+
+

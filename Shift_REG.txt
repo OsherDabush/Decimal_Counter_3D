@@ -1,0 +1,34 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Shift_REG is
+    Port(clk500, rst : in std_logic;
+         Anode : out std_logic_vector(2 downto 0));
+end Shift_REG;
+
+architecture Behavioral of Shift_REG is
+signal rst_rdy_p : std_logic;
+begin
+
+process(clk500)
+variable t : unsigned(2 downto 0) := "011";
+variable rst_rdy : std_logic := '1';
+begin
+if rising_edge(clk500) then
+  if(rst = '1') then
+    if(rst_rdy = '1') then
+     t := "110";
+    else
+     t := t(1 downto 0) & t(2);
+    end if;
+  else
+    t := t(1 downto 0) & t(2);
+  end if;
+Anode <= std_logic_vector(t);
+rst_rdy := not rst;
+end if;
+rst_rdy_p <= rst_rdy;
+end process;
+end Behavioral;
+

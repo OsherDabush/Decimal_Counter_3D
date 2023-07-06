@@ -1,0 +1,44 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity counter is
+    Port(clk5, rst, CLR, EN : in std_logic;
+         Top_Count : in std_logic_vector(3 downto 0);
+         Top_Count_Reach : out std_logic;
+         Reach9 : out std_logic;
+         q: buffer integer range 0 to 9);
+end counter;
+
+architecture Behavioral of counter is
+begin
+process(clk5)
+begin
+if (rising_edge(clk5)) then
+  if(rst = '1' or CLR = '1') then
+      q <= 0;
+  elsif(EN = '1') then
+         q <= q + 1;
+      if(q = 9) then  
+         q <= 0;
+      end if;
+  end if;
+end if;
+end process;
+
+process(Q)
+begin
+if(Q = 9) then
+  reach9<='1';
+else
+  reach9<='0'; 
+end if;
+
+if(Q = to_integer(unsigned(TOP_COUNT))) then
+  Top_Count_Reach<= '1';
+else
+  Top_Count_Reach<= '0';
+end if;
+end process;
+
+end Behavioral;

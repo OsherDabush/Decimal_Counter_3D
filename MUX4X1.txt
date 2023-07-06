@@ -1,0 +1,23 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity MUX_4X1 is
+    Port(Q0, Q1, Q2 : in integer range 0 to 9;
+         sel : in std_logic_vector(1 downto 0);
+         Y : out integer range 0 to 9);
+end MUX_4X1;
+
+architecture Behavioral of MUX_4X1 is
+begin
+
+process(sel, Q0, Q1, Q2)
+begin
+    case sel is
+        when "00" => Y <= Q0;
+        when "01" => Y <= Q1;
+        when "10" => Y <= Q2;
+        when others => Y <= 0;
+    end case;
+end process;
+end Behavioral;

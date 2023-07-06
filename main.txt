@@ -1,0 +1,95 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Decimal_Counter_3D is
+    Port(RESET, CLK100MHZ  : in std_logic;
+         TOP_COUNT : in std_logic_vector(3 downto 0);
+         SEVEN_SEG : out std_logic_vector(6 downto 0);
+         ANODES : out std_logic_vector(2 downto 0);
+         AN_3 : out std_logic;
+         LED : out std_logic);
+end Decimal_Counter_3D;
+
+architecture Behavioral of Decimal_Counter_3D is
+
+component DIVIDER
+    Port(clk100M, rst : in std_logic;
+         Div : in std_logic_vector(31 downto 0);
+         CLKOUT : out std_logic);
+end component;
+ 
+component counter  
+    Port(clk5, rst, CLR, EN : in std_logic;
+         Top_Count : in std_logic_vector(3 downto 0);
+         Top_Count_Reach : out std_logic;
+         Reach9 : out std_logic;
+         q: buffer integer range 0 to 9);
+end component;
+
+component Com_Log_Circuit
+    Port(T0, T1, T2, R0, R1 : in std_logic;
+         CLR_ALL, EN1, EN2 : out std_logic);
+end component;
+
+component Shift_REG
+    Port(clk500, rst : in std_logic;
+         Anode : out std_logic_vector(2 downto 0));
+end component;
+
+component Anode_Encoder
+    Port(Anode : in std_logic_vector(2 downto 0);
+         sel : out std_logic_vector(1 downto 0));
+end component;
+
+component MUX_4X1
+    Port(Q0, Q1, Q2 : in integer range 0 to 9;
+         sel : in std_logic_vector(1 downto 0);
+         Y : out integer range 0 to 9);
+end component;
+
+component SEV_SEG_Decoder
+    Port(Y : in integer range 0 to 9;
+         SEG : out std_logic_vector(6 downto 0));
+end component;
+
+signal C500, C5 : std_logic;
+signal S : std_logic_vector(1 downto 0);
+signal AN : std_logic_vector(2 downto 0);
+signal D : std_logic_vector(6 downto 0);
+signal E1, E2, T0, T1, T2, R0, R1 : std_logic;
+signal D0, D1, D2 : integer range 0 to 9;
+signal I : integer range 0 to 9;
+signal CLR_ALL : std_logic;
+
+begin
+AN_3 <= '1';
+ANODES <= AN;
+LED <= (T0 AND T1 AND T2);
+
+clk_5HZ: DIVIDER port map(clk100M=>CLK100MHZ, rst=>RESET, Div=>x"00989680", CLKOUT=>C5);--Div=>x"00989680"
+
+clk_500HZ: DIVIDER port map(clk100M=>CLK100MHZ, rst=>RESET, Div=>x"000186A0", CLKOUT=>C500);--Div=>x"000186A0"
+                              
+C_0: counter port map(clk5=>C5, rst=>RESET, Top_Count=>TOP_COUNT, CLR=>CLR_ALL,
+                      EN=>'1', Reach9=>R0, Top_Count_Reach=>T0, Q=>D0);
+
+C_1: counter port map(Clk5=>C5, rst=>RESET, Top_Count=>TOP_COUNT, CLR=>CLR_ALL,
+                      EN=>E1, Reach9=>R1, Top_Count_Reach=>T1, Q=>D1);
+
+C_2: counter port map(Clk5=>C5, rst=>RESET, Top_Count=>TOP_COUNT, CLR=>CLR_ALL,
+                      EN=>E2, Top_Count_Reach=>T2, Q=>D2);
+                                           
+CLC: Com_Log_Circuit port map(T0=>T0, T1=>T1, T2=>T2, R0=>R0, R1=>R1, EN1=>E1,
+                               EN2=>E2, CLR_ALL=>CLR_ALL);                     
+                    
+S_R: Shift_REG port map(clk500=>C500, rst=>RESET, Anode=>AN);
+
+AN_ENCODER: Anode_Encoder port map(Anode=>AN, sel=>S);
+
+MUX4X1: MUX_4X1 port map(Q0=>D0, Q1=>D1, Q2=>D2, sel=>S, Y=>I);
+
+SSD: SEV_SEG_Decoder port map(Y=>I, SEG=>SEVEN_SEG);
+
+end Behavioral;
+
