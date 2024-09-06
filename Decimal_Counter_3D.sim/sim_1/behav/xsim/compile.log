@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/osher/Vivado2020.1_Project/Decimal_Counter_3D/Decimal_Counter_3D.srcs/sources_1/new/Divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Divider'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/osher/Vivado2020.1_Project/Decimal_Counter_3D/Decimal_Counter_3D.srcs/sim_1/new/Divider_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Divider_TB'

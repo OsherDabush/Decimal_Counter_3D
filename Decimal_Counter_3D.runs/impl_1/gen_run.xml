@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1725625357">
+  <File Type="BITSTR-BMM" Name="DecimalCounter_3D_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="DecimalCounter_3D_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="DecimalCounter_3D_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="DecimalCounter_3D_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="DecimalCounter_3D.tcl"/>
+  <File Type="OPT-TIMING" Name="DecimalCounter_3D_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="DecimalCounter_3D_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="DecimalCounter_3D_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="DecimalCounter_3D_reports.tcl"/>
+  <File Type="OPT-DRC" Name="DecimalCounter_3D_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="DecimalCounter_3D.hwdef"/>
+  <File Type="PWROPT-DCP" Name="DecimalCounter_3D_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="DecimalCounter_3D_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="DecimalCounter_3D_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="DecimalCounter_3D_placed.dcp"/>
+  <File Type="PLACE-IO" Name="DecimalCounter_3D_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="DecimalCounter_3D_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="DecimalCounter_3D_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="DecimalCounter_3D_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="DecimalCounter_3D_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="DecimalCounter_3D_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="DecimalCounter_3D_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="DecimalCounter_3D_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="DecimalCounter_3D_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="DecimalCounter_3D.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="DecimalCounter_3D_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="DecimalCounter_3D_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="DecimalCounter_3D_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="DecimalCounter_3D.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="DecimalCounter_3D_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="DecimalCounter_3D_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="DecimalCounter_3D_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="DecimalCounter_3D_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="DecimalCounter_3D_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="DecimalCounter_3D_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="DecimalCounter_3D_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="DecimalCounter_3D.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="DecimalCounter_3D_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="DecimalCounter_3D_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="DecimalCounter_3D_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="DecimalCounter_3D_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="DecimalCounter_3D_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="DecimalCounter_3D_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="DecimalCounter_3D_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="DecimalCounter_3D_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="DecimalCounter_3D_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="DecimalCounter_3D_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="DecimalCounter_3D_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="DecimalCounter_3D_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="DecimalCounter_3D_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="DecimalCounter_3D_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="DecimalCounter_3D_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="DecimalCounter_3D_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="DecimalCounter_3D_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="DecimalCounter_3D_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="DecimalCounter_3D_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="DecimalCounter_3D_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="DecimalCounter_3D_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="DecimalCounter_3D.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="DecimalCounter_3D_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="DecimalCounter_3D.rbt"/>
+  <File Type="BITSTR-NKY" Name="DecimalCounter_3D.nky"/>
+  <File Type="PDI-FILE" Name="DecimalCounter_3D.pdi"/>
+  <File Type="RCFI_FILE" Name="DecimalCounter_3D.rcfi"/>
+  <File Type="CFI_FILE" Name="DecimalCounter_3D.cfi"/>
+  <File Type="RNPI_FILE" Name="DecimalCounter_3D.rnpi"/>
+  <File Type="NPI_FILE" Name="DecimalCounter_3D.npi"/>
+  <File Type="RBD_FILE" Name="DecimalCounter_3D.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="DecimalCounter_3D.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="DecimalCounter_3D.sysdef"/>
+  <File Type="BG-BGN" Name="DecimalCounter_3D.bgn"/>
+  <File Type="BG-DRC" Name="DecimalCounter_3D.drc"/>
+  <File Type="RDI-RDI" Name="DecimalCounter_3D.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Anode_Encoder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/COM_Logic.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Counter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Divider.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MUX_4X1.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SEG_Decoder.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Shift_REG.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DecimalCounter_3D.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="DecimalCounter_3D"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/SEV_SEG_XDC.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
